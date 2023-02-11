@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="chatter1" pkg="python_ros_server" type="chatter1.py"/>
+
+    <node name="chatter2" pkg="python_ros_server" type="chatter2.py"/>
+
+    <node name="server" pkg="python_ros_server" type="server.py" output="screen" >
+        <param name="topics" value="[/chatter1, /chatter2]"/>
+    </node>
+
+</launch>
